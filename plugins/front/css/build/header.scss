@@ -1,0 +1,118 @@
+/*Header style
+=====================*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    -webkit-box-shadow: 4px 0px 14px 0px rgba(0,0,0,0.40);
+    -moz-box-shadow: 4px 0px 14px 0px rgba(0,0,0,0.40);
+    box-shadow: 4px 0px 14px 0px rgba(0,0,0,0.40);
+}
+div#header-bar {
+    background: $header-top-bg;
+    padding: 5px 0;
+    overflow: auto;
+    display: block;
+    transition: all ease 3s;
+    -webkit-transition: all ease 3s;
+    -moz-transition: all ease 3s;
+}
+ul.navigate-links {
+    padding: 0;
+    margin: 0;
+    float: right;
+    line-height: 31px;
+    li{
+    	list-style: none;
+    	display: inline-block;
+    }
+	li.button{
+		border-radius: 3px;
+		transition: all ease 0.5s;
+		-webkit-transition: all ease 0.5s;
+		-moz-transition: all ease 0.5s;
+		a{
+			font-size: 15px;
+			color: #fff;
+			padding: 0 20px;
+			
+			text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+			text-transform: uppercase;
+		}
+	}
+	li.button.green-btn{background: $green-color;} 
+	li.button.green-btn:hover{background: $green-color-hover;}  
+	li.button.orange-btn{background: $orange-color;} 
+	li.button.orange-btn:hover{background: $orange-color-hover;}  
+	
+}
+
+div#header-main{
+	background: $header-main-bg;
+    padding: 0;
+    .logo {
+    	padding: 10px 0;
+	}
+    nav{
+    	ul{
+	    	padding: 0;
+	    	margin: 0;
+	    	float: right;
+	    	display: table;
+	    	height: 80px;
+	    	li{
+	    		list-style: none;
+	    		display: table-cell;
+	    		vertical-align: middle;
+	    		padding: 0 18px;
+	    		ul{
+	    			display: none; 
+	    			position: absolute;
+	    			width: 450px;
+				    background: $header-main-bg;
+				    padding: 15px 15px 5px 15px;
+				    height: auto !important;
+				    margin-top: 31px;
+	    			li{
+	    				display: inline-block;
+	    				width: 50%;
+	    				float: left;
+	    				padding: 0;
+	    				font-size: 90%;
+    					margin-bottom: 15px; 
+	    			}
+	    		}
+	    	}
+	    	>li:last-child{
+	    		padding-right: 0;
+	    	}
+	    	li:last-child ul{
+	    		right: 0;
+	    	}
+	    	li:last-child ul:before {
+	    		right: 40px;
+	    		left: auto; 
+	    	}
+
+    	}
+    }
+}
+
+
+
+/*sticky header*/
+header.sticky{
+	#header-bar{
+		display: none;
+	}
+	div#header-main{
+		background: rgba(255,255,255,1);
+		nav ul{
+			height: 55px;
+			ul{margin-top: 15px;}
+		}
+	}
+	.logo img{
+		height: 35px;
+	}
+} 

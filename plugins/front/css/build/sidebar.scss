@@ -1,0 +1,97 @@
+/*home sidebar style
+=====================*/
+
+.widgets{
+	background: $blue-color;
+	-webkit-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.10);
+    box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.10);
+    margin-bottom: 15px;
+    img{
+    	cursor: pointer;
+    }
+}
+
+.widget-information{
+	padding: 15px;
+	color: $white-color;
+	h4{
+		margin-bottom: 20px;
+		i{
+			margin-right: 5px;
+		}
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		li{
+			list-style: none;
+			background: url(../../img/information-sprite.png) no-repeat 0px 10px;
+		    padding-left: 22px;
+		    border-bottom: dotted 1px;
+		    line-height: 30px;
+		}
+		li:last-child{
+			border: 0;
+		}
+		li.halal{
+			background-position: 0px 10px;
+		}
+		li.news-feed{
+			background-position: 0px -21px;
+		}
+		li.restaurant{
+			background-position: 0px -50px;
+		}
+		li.shop{
+			background-position: 0px -82px;
+		}
+	}
+	
+}
+
+.widget-location{
+	padding: 5px;
+	h4{
+		text-align: center;
+		text-transform: uppercase;
+		color: $white-color;
+		padding: 5px 0 10px 0;
+	}
+	img{
+		border: solid 1px $white-color; 
+	}
+}
+
+.widget-user{
+	padding: 0;
+	text-align: center;
+	.title{
+		padding: 15px 15px 60px;
+		font-size: 20px;
+		color: $white-color;
+	}
+	.description{
+		background: $white-color;
+		padding-bottom: 15px;
+		.profile-img{
+			display: inline-block;
+			width: 100px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: -45px 0 0 0;
+		}
+		.info {
+    		color: #666666;
+    		>p{
+    			margin-bottom: 5px;
+    		}
+    		.name{
+    			font-size: 22px;
+    			color: $solid-color;    
+    			margin: 5px 0;
+    		}
+		}
+	}
+	
+}

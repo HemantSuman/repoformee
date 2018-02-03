@@ -1,0 +1,295 @@
+/*Header style
+=====================*/
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    @include box-shadow(4px, 0px, 14px, rgba(0, 0, 0, 0.40));
+	@include mobile-medium {   
+		position: static;  
+	}
+    .logo{
+    	img{
+    		@include bp-medium {
+    			height: 47px;
+    		}
+    		@include bp-small {
+    			height: 40px;
+    		}
+    		@include mobile-medium{
+	    		height: 30px; 
+	    	}
+    	}
+    }    
+}
+div#header-bar {
+    background: $header-top-bg;
+    padding: 5px 0;
+    display: block;
+    @include transition(all ease 3s); 
+}
+ul.navigate-links {
+    padding: 0;
+    margin: 0;
+    float: right;
+    line-height: 31px;
+    li{
+    	list-style: none;
+    	display: inline-block;
+    }
+	li.button{
+		border-radius: 3px;
+		@include transition(all ease 0.5s);
+		a{
+			font-size: 15px;
+			color: $white-color;
+			padding: 0 20px;
+			text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+			text-transform: uppercase;
+			@include bp-medium {
+				font-size: 13px;
+			} 
+			@include mobile-medium {   
+				padding: 0 10px;   
+			}
+		}
+		&.green-btn{
+			background: $green-color;
+			&:hover{
+				background: $green-color-hover;
+			}  
+		} 
+		&.orange-btn{
+			background: $orange-color;
+			&:hover{
+				background: $orange-color-hover;
+			}
+		} 
+	}
+	@include bp-medium{
+		line-height: 28px;
+	}  	
+}
+
+div#header-main{
+	background: $header-main-bg;
+    padding: 0;
+    .logo {
+    	padding: 10px 0;
+	}
+	.menu-icon{
+		margin-top: -42px;
+    	float: right;
+    	color: transparent;
+    	background: url(../../img/navigation-menu.png) no-repeat;
+    	background-size: 20px;
+    	width: 20px;
+    	height: 19px;
+    	@include mobile-medium{
+    		margin-top: -36px;
+    	}
+	}
+    nav{
+    	@include mobile-medium{
+			position: fixed;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.7);
+			width: 100%;
+			height: 100%;
+			z-index: 999;		
+			@include transform (translate3d(-100%, 0px, 0px));
+            @include transition(all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s);
+            overflow-x: scroll;
+            overflow-y: hidden;
+	    }
+    	>ul{
+	    	padding: 0;
+	    	margin: 0;
+	    	float: right;
+	    	display: table;
+	    	height: 80px;
+	    	@include bp-medium {
+    			height: 67px;
+    		}
+    		@include bp-small {
+    			height: 60px;   
+    		}
+    		@include mobile-medium{
+				width: 80%;
+			    float: none;
+			    background: $white-color;
+			    position: relative;
+			    height: 100% !important;
+	    	}
+	    	li{
+	    		list-style: none;
+	    		display: table-cell;
+	    		vertical-align: middle;
+	    		padding: 0 18px;
+	    		position: relative;
+	    		@include bp-large{
+		    		padding: 0 15px;
+	    		}
+	    		@include bp-medium {
+		    		padding: 0 10px;
+	    		}
+	    		@include mobile-medium{
+					display: block;	
+					padding: 0;
+					border-bottom: solid 1px $border-color;
+					position: relative;
+		    	}
+	    		ul{  
+	    			display: none; 
+	    			position: absolute;
+	    			width: 450px;
+				    background: rgba(255,255,255,0.90);
+				    padding: 15px 15px 5px 15px;
+				    height: auto !important;
+				    margin-top: 31px;
+				    @include bp-medium {
+		    			width: 100%;
+		    			left: 0;
+	    			    margin-top: 25px;
+		    		}
+		    		@include bp-small {
+	    			    margin-top: 22px;
+		    		}
+		    		@include mobile-medium{
+		    			position: static;
+		    			width: 100%;
+		    			padding: 0;
+		    			overflow: hidden;
+    					margin-top: 0;
+    					background: $grey-color;
+		    		}
+	    			li{
+	    				display: inline-block;
+	    				width: 50%;
+	    				float: left;
+	    				padding: 0;
+	    				font-size: 90%;
+    					margin-bottom: 15px;
+    					@include transition(all ease 3s);
+    					@include bp-medium {
+			    			width: 33%; 
+			    		} 
+			    		@include mobile-medium{
+			    			width: 100%; 
+			    			margin-bottom: 0;
+			    		} 
+	    			}
+	    		}
+	    		.navicon{
+		    		@include mobile-medium{
+					    background: url(../../img/arrow-icon-black.png) 0 -7px no-repeat;
+					    width: 12px;
+					    height: 7px;
+					    display: inline-block;
+					    position: absolute;
+					    right: 15px;
+					    background-size: 12px;
+					    top: 15px;
+			    	}
+		    	}
+		    	a{
+		    		text-transform: capitalize;
+		    		@include mobile-medium{
+		    			padding: 10px;
+		    			display: block;
+		    			overflow: hidden;
+		    		}
+		    	}
+	    		
+	    	}
+	    	>li{
+	    		@include bp-medium {
+		    		&:hover{background: $blue-color;
+		    			>a{
+		    				color: $white-color; 
+		    			}
+		    		}
+	    		}
+	    		@include mobile-medium{
+		    		&:hover{background: transparent;
+		    			>a{
+		    				color: inherit; 
+		    			}
+		    		}
+	    		}
+	    	}
+	    	>li:last-child{
+	    		padding-right: 0;
+	    		@include bp-medium {
+	    			padding-right: 10px;
+	    		}	
+	    	}
+	    	li:last-child, li:nth-last-child(2){
+	    		ul{
+	    			right: 0;  
+    			}
+	    	}
+	    	li:last-child ul:before {
+	    		right: 40px;
+	    		left: auto; 
+	    	}
+
+    	}
+    }
+    &.active{
+    	.menu-icon{
+    		background-position: 0 -18px;
+    		position: fixed;
+		    top: 100px;
+		    right: 15px; 
+		    z-index: 99999; 
+    	}
+    	nav{
+	    	@include transform(translate3d(0px, 0px, 0px));
+    	}
+    }
+}
+
+
+
+/*sticky header*/
+header.sticky{
+	#header-bar{
+		display: none;
+	}
+	div#header-main{
+		background: rgba(255,255,255,1);
+		nav ul{
+			height: 55px;
+			ul{
+				margin-top: 15px;
+				@include bp-medium {
+					margin-top: 19px;
+				}
+			}
+		}
+	}
+	.logo{ 
+		img{
+			height: 35px;
+		}
+	}
+} 
+
+
+/*responsive navigation*/
+body.logged-in{
+	ul.navigate-links{
+		li{
+			@include mobile-small{
+				display: none;
+			}
+			&.user-profile, &.orange-btn{
+				@include mobile-small{
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

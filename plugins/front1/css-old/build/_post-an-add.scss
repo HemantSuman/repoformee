@@ -1,0 +1,598 @@
+/*user dashboard*/
+
+body.logged-in{
+	.navigate-links{
+		li{
+			color: $white-color;
+		    margin-left: 12px;
+		}
+		li.user-profile{
+			color: $white-color;
+			font-size: 15px;
+			text-transform: capitalize;
+			position: relative;
+			i{
+				margin-left: 5px;
+			}
+			.profile-img{
+				overflow: hidden;
+				display: inline-block;
+				border-radius: 50%;
+				float: left;
+    			margin-right: 10px;
+			}
+			ul.dropdown-menu{
+				top: 100%;
+				right: -10px;
+				left: auto;
+				@include bp-medium {
+					font-size: 13px;
+				} 
+				li{
+					margin-left: 0;
+					text-align: left;
+					display: block;
+    				overflow: hidden;
+    				border-bottom: solid 1px $border-color;
+    				&:last-child{
+    					border: 0;	
+    				}
+    				>a{
+    					padding: 10px 40px 10px 20px;
+    					position: relative;
+    					@include bp-medium {
+							padding: 5px 30px 5px 10px;
+						} 
+    					.glyphicon, .badge{
+    						position: absolute;
+    						right: 15px;
+    						top: 12px; 
+    						@include bp-medium {
+    							right: 10px;
+								top: 9px;
+								font-size: 10px;
+							} 
+    					}
+    				}
+				}
+			}
+		}
+		li.cart{
+			position: relative;
+			a{
+				padding: 0 10px;
+			}
+			span.cart-value {
+			    position: absolute;		    
+			    top: -4px;
+			    right: -5px;
+			    background: #fff;
+			    width: 14px;
+			    height: 14px;
+			    color: $solid-color;
+			    font-size: 11px;
+			    line-height: 13px;
+			    text-align: center;
+			    border-radius: 50%;
+			}
+		}
+	}
+
+	#header-main{
+		nav{
+			ul.custom-nav{
+				li{
+					padding: 0 2px;
+					a{
+						background: $green-color;
+						padding: 0 15px; 
+						color: $white-color;
+						line-height: 40px;
+					    display: inline-block;
+					    text-align: center;
+					    border-radius: 5px;
+					    @include bp-medium{
+					    	line-height: 35px;
+					    }
+					    i{
+					    	margin-right: 5px;
+					    }
+					}
+					a:hover{
+						background: $green-color-hover;
+					}
+				}
+			}
+		}
+	}
+}
+
+#middle.no-banner{
+	padding-top: 124px;
+	@include bp-medium {
+		padding-top: 104px; 
+	}
+	@include mobile-medium {
+		padding-top: 0;
+	}
+	div#main-banner {
+	    margin-top: -120px;
+	}
+	#breadcrumb-banner{
+		background: $categories-bg;
+		.breadcrumb{
+			padding: 20px 0;
+			@include mobile-medium{
+				padding: 12px 0;
+			}
+		}
+	}
+	#login-inner-section{
+		background: $categories-bg;
+		@include mobile-medium{
+			background: $white-color;  	
+		}
+		.container{
+			@include mobile-medium{
+				padding-left: 0;
+				padding-right: 0; 
+			}	
+		}
+		.classified-post{
+			margin-bottom: 20px;
+			@include mobile-medium{
+				margin-bottom: 0;   	
+			}
+			.title{
+				text-align: center;
+				background: $blue-color;
+				line-height: 50px;
+				font-size: 22px;
+				font-weight: normal;
+				color: $white-color;    
+				@include bp-small{
+					font-size: 18px;  	
+				}
+				@include mobile-medium{
+					font-size: 15px;
+					line-height: 35px;   	
+				}
+			}
+		}	
+	}
+}
+
+#rootwizard{
+	background: $white-color;
+	padding: 20px 0 0 0;
+	overflow: hidden;
+	.navbar{
+		width: 800px;
+		margin: auto;
+		max-width: 70%;
+	    padding-bottom: 60px;
+	    @include bp-small{
+			padding-bottom: 40px;  	
+		}
+		@include mobile-medium{
+			max-width: 90%;
+		    padding-bottom: 0px;    	
+		}
+	}
+	.navbar-inner{
+		position: relative;
+		z-index: 1
+	}
+	.progress {
+	    position: absolute;
+	    width: 100%;
+	    margin-top: -30px;
+	    z-index: 0;
+	    height: 9px;
+	   	background: url(../../img/progress-bar.png) repeat-x center;
+	   	@include bp-small {
+			margin-top: -25px;   
+		}
+	}
+	.progress-bar{
+		    background-image: -moz-linear-gradient(90deg,#5698b9 0,#0b6b9a 100%);
+    		background-image: -webkit-linear-gradient(90deg,#5698b9 0,#0b6b9a 100%);
+    		background-image: -ms-linear-gradient(90deg,#5698b9 0,#0b6b9a 100%);
+	}
+	.nav-pills{
+		display: table;
+		 width: 100%;
+		>li{
+			display: table-cell;
+			float: none;
+			text-align: center;
+			>a{
+				display: inline-block;
+			  	border-radius: 50%;
+			  	/*background-image: -moz-linear-gradient( 90deg, rgb(221, 221, 221) 0%, rgba(255,255,255,1) 100%);
+			  	background-image: -webkit-linear-gradient( 90deg, rgb(221, 221, 221) 0%, rgba(255,255,255,1) 100%);
+			  	background-image: -ms-linear-gradient( 90deg, rgb(221, 221, 221) 0%, rgba(255,255,255,1) 100%);
+			  	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.29),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.21);*/
+			  	background: url(../../img/progress-li-bg1.png)no-repeat center;
+			  	width: 50px;
+			  	height: 51px;
+			  	color: $progress-li-color;
+			  	font-size: 20px;
+		    	padding: 0;
+		    	text-align: center;
+		    	@include bp-medium {
+					font-size: 16px; 	
+				}
+				@include bp-small {
+					width: 40px;
+			  		height: 41px;  
+				}      
+			}
+		}
+		>li:first-child{
+			text-align: left;
+		}
+		>li:last-child{
+			text-align: right;
+		}
+		>li{
+			span{
+				background: url(../../img/span-checked1-bg.png)no-repeat center;
+			  	width: 46px;
+			  	height: 46px;
+			  	display: inline-block;
+			  	margin-top: 2px;
+			  	line-height: 46px;
+			  	color: transparent;
+			  	@include bp-small {
+					width: 36px;
+			  		height: 36px;
+			  		line-height: 36px;
+			  		background-size: 36px !important; 	 
+				} 
+			}
+		}
+		>li.active{
+			span{
+				background: url(../../img/span-active-bg.png)no-repeat center;
+			  	color: $white-color;
+			}
+		}
+		>li.active+li, >li.active+li+li{
+			span{
+				background: none;
+			  	color: $progress-li-color;
+			}
+		}
+		.category-name {
+		    position: absolute;
+		    margin-left: -70px;
+		    display: block;
+		    width: 200px;
+		    padding-top: 15px;
+		    font-size: 18px;
+		    color: $solid-color;
+		    @include bp-medium {
+				font-size: 15px; 	
+			}
+			@include bp-small {
+				font-size: 13px; 	
+			}
+			@include mobile-medium {
+				display: none;  
+			}
+		}
+	}
+	.categories{
+		overflow: hidden;
+		margin: 0;	
+		padding: 20px 10px 0 10px;
+		@include bp-medium{
+			padding: 20px 5px 0 5px;   
+		}
+		.categories-inner{
+			margin-bottom: 20px;
+			@include bp-medium{
+				margin-bottom: 10px;
+			}
+		}
+		div[class*="col-md"]{
+			padding-left: 10px;
+			padding-right: 10px;
+			@include bp-medium{
+				padding-left: 5px;
+				padding-right: 5px; 
+			}
+		}
+	}
+	.classified-form{
+		.select-category{
+			line-height: 40px;
+			@include bp-small{
+				line-height: 30px; 
+			}
+			label{
+				font-weight: normal;
+				color: $solid-color;
+				margin-right: 10px;
+			}
+			a.choose-category {
+			    margin-left: 15px;
+			    color: $white-color;
+			    background: $green-color;
+			    display: inline-block;
+			    border-radius: 5px;
+			    padding: 0 15px;
+			    @include mobile-small{
+					margin-left: 0; 
+					display: block; 
+				}   
+			}
+			a.choose-category:hover {
+				background: $green-color-hover;          
+			}
+		}
+		.form-row {
+		    padding: 10px 0;
+		    display: inline-block;
+    		width: 100%;
+    		@include bp-small{
+				padding: 5px 0;
+			}
+		    div[class*="col-"]{
+		    	@include mobile-small{
+		    		width: 100%;
+		    	}
+		    	>label{
+			    	font-weight: normal;
+					color: $solid-color;
+					line-height: 40px;
+					display: block;
+					text-align: right;
+					@include bp-small{
+						line-height: 30px; 
+					}
+					@include mobile-medium{
+						text-align: left;
+					}
+					.require{
+						color: $red-color;
+					}
+				}
+		    }
+	    	span.hint {
+			    display: block;
+			    font-size: 13px;
+			    color: $nav-li-color;
+			    @include bp-medium{
+			    	font-size: 11px;
+			    }
+			    @include bp-small{
+			    	display: block !important;
+				    position: static !important;
+				    padding: 0 !important;
+			    }
+			}
+			span.hint.edit {
+				position: absolute;
+				padding: 0 10px;
+				display: inline-block;
+				padding-top: 12px;
+				@include bp-medium{
+			    	padding-top: 0px; 
+			    }
+				i{
+					margin-right: 5px;
+					color: $green-color;
+					font-size: 16px;
+					@include bp-small{
+				    	font-size: 12px !important;
+				    }
+				}
+			}
+			select{
+	    		width: 450px;
+	    		height: 40px;
+	    		border: solid 1px $grey-color;
+	    		max-width: 100%;
+	    		padding: 0 15px;
+				box-sizing: border-box;
+				font-size: 14px;
+				border-radius: 0;
+	    		@include appearance(none);
+	    		background: url(../../img/select-arrow.png) right 15px center no-repeat;
+	    		@include bp-small {
+					width: 350px;
+					height: 30px;	
+				} 
+	    		&:focus{
+	    			outline:0;
+	    		}
+	    	}
+		    .value-field{
+		    	position: relative;
+		    	input:not([type='checkbox']):not([type='radio']):not([type='file']){
+		    		width: 450px;
+		    		height: 40px;
+		    		border: solid 1px $grey-color;
+		    		max-width: 100%;
+		    		padding: 0 10px;
+    				box-sizing: border-box;
+    				font-size: 14px;
+    				border-radius: 0;
+    				box-shadow: none;
+					border-radius: 0;
+    				@include bp-small {
+						width: 350px;
+						height: 30px;	
+					}
+
+		    	}
+		    	&.no-input-field {
+				    padding-top: 7px;
+				}
+		    	input[type="number"]{
+		    		-moz-appearance: textfield;
+		    	}
+		    	input[type="number"]::-webkit-inner-spin-button {  
+		    		-webkit-appearance: none; 
+		    		appearance: none; 
+		    		-moz-appearance: none;
+		    	}
+		    	textarea{
+		    		width: 450px;
+		    		line-height: normal;
+		    		border: solid 1px $grey-color;
+		    		max-width: 100%;
+		    		padding: 10px;
+    				box-sizing: border-box;
+    				height: 130px;
+    				box-shadow: none;
+					border-radius: 0;
+    				@include bp-small {
+						width: 350px;	
+					}
+		    	}
+		    	.irs {
+				    width: 450px;
+				    max-width: 100%;
+				}
+				.file-label{
+					display: inline-block;
+					input[type=file] {
+						position: relative;
+						-webkit-appearance: textfield;
+						-webkit-box-sizing: border-box;
+					    width: 100px;
+					    display: inline-block;
+					    opacity: 0;
+					    line-height: 30px;
+					    z-index: 1;
+					    cursor: pointer;
+					}
+					&:after{
+						content: "Browse";
+						display: inline-block;
+						padding: 0 15px;
+						background: $dark-green-color;
+						color: $white-color;
+					    position: absolute;
+					    left: 0;
+					    line-height: 30px;
+					    border-radius: 2px;
+					    z-index: 0;
+					    @include transition(all ease 0.5s);
+					}
+					&:hover{
+						&:after{
+							background: $green-color;
+						}
+					}	
+				}
+				
+
+				
+		    	input:focus, textarea:focus, select:focus{
+		    		/*border: solid 1px $solid-color !important;*/
+		    		outline: 0;
+		    	}
+		    	.input-group-addon {
+				    display: inline-block;
+				    position: absolute;
+				    right: 0;
+				    z-index: 1;   
+				    width: 50px !important;
+				    height: 100%;
+				}
+
+				.input-group-addon i {
+				    margin-top: 5px;
+				}
+		    	.datepicker{
+		    		width: 220px!important;
+		    		margin-right: 10px;
+		    		background: url(../../img/datepicker-icon.png) right 10px center no-repeat #ffffff;
+		    		&:last-child{
+		    			margin-right: 0 !important; 
+		    		}
+		    		@include bp-small{
+				    	width: 170px !important;	
+				    }
+				    @include mobile-medium{  
+				    	width: 160px !important;	  
+				    }
+				    @include mobile-small{
+						width: 130px !important;
+						font-size: 11px !important;
+					}
+		    	}
+		    	.submit-btn{
+		    		background: $green-color;
+		    		text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    				text-transform: uppercase;
+    				color: $white-color;
+				    border: 0 !important;
+		    	}
+		    	.submit-btn:hover{
+		    		background: $blue-color;
+		    	}
+		    	input.m-checkbox {
+				    position: relative;
+				    z-index: 1;
+				    appearance:none;
+				    -webkit-appearance: none;
+				   -moz-appearance:none;
+				   opacity: 0;
+				   width: 18px;
+				   height: 16px;
+				   display: inline-block;  
+				   margin: 10px 0 0 0;
+				}
+				input.m-checkbox+label {
+				    margin-left: -20px;
+				    padding-left: 20px;
+				    position: relative;
+				    z-index: 0;
+				    background: url(../../img/checkbox-icon-green.png) no-repeat 0 2px;
+				    display: inline;
+				}
+				input.m-checkbox:checked+label {
+					background: url(../../img/checkbox-icon-green-checked.png) no-repeat 0 2px;
+				}
+				
+		    }
+		    .dd-container, .dd-container>*{
+		    	width: 450px !important;
+		    	max-width: 450px !important;
+		    }
+		    .dd-select{
+		    	    border: 1px solid #e1e1e1;
+		    	    border-radius: 0 ;
+		    	    background: transparent !important;
+		    	    font-size: 14px !important;
+		    	    label{
+		    	    	font-weight: normal;
+						color: $solid-color;
+		    	    }  
+		    }
+		    .dd-option{
+		    	padding: 5px 10px !important;
+		    	font-size: 13px !important;
+		    	label{
+	    	    	font-weight: normal;
+					color: $solid-color;
+	    	    }
+		    }
+
+		}
+		hr{
+	    	margin: 15px 0;  
+	    	border: 0;
+	    	border-bottom: solid 1px $grey-color;
+	    	@include bp-small{
+	    		margin: 8px 0; 
+	    	}
+	    }
+	}
+
+}

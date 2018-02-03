@@ -1,0 +1,119 @@
+/*main-search-form style
+=====================*/
+#main-search-form{
+	background: $main-search-form;
+	width: 100%;
+	position: absolute;
+	bottom: 50px;
+    z-index: 9;
+    padding: 18px 0;
+	.all-category-search>div{  
+		padding: 0;
+	}
+}
+
+.item-name{
+	.searchfield{
+		width: 100%;
+		background: $white-color;
+		height: 60px;
+		border: 0;
+		padding: 0 15px;
+		border-left: solid 1px #d6d6d6;
+	}
+	a.saved-search {
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+	    -moz-transform: translateY(-50%);
+	    right: 15px;
+	    font-size: 14px;
+	    color: $green-color;
+        padding-left: 25px;
+        background: url(../../img/saved-search.png) no-repeat 10px center #fff;
+        padding: 5px 0 5px 35px;
+	}
+}
+.location{
+	padding: 0 55px 0 0;
+	position: relative;
+	.locationfield{
+		width: 100%;
+		height: 60px;
+		border: 0;
+		padding: 0 15px 0 35px;
+		border-left: solid 1px #d6d6d6; 
+		background: url(../../img/locate-icon.png) no-repeat left 10px center $white-color; 
+	}
+	.search-button{
+		width: 96px;
+		height: 60px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 0;
+		background: url(../../img/search-icon.png) no-repeat center $green-color;
+		transition: all ease 0.5s;
+		-webkit-transition: all ease 0.5s;
+		-moz-transition: all ease 0.5s;
+	}
+	.search-button:hover{
+		background-color: $blue-color;
+	}
+}
+
+
+
+
+.dropdown-toggle {
+    line-height: 60px;
+    padding: 0 15px;
+    width: 100%;
+    .dropdown-text {
+	    color: #181818;
+	}
+	.dropdown-icon {
+	    right: 10px;
+	    padding: 0;
+	}
+}
+
+.dropdown, .dropdown-toggle {
+    width: 100%;
+}
+
+.dropdown img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+}
+.dropdown-below .dropdown-menu-wrapper{
+	margin: 0;
+    padding: 0;
+}
+
+.dropdown-back, .dropdown-close {
+    padding: 14px;   
+    top: 1px;
+}
+
+.dropdown-header {
+    padding: 15px 0;
+}
+
+.km-dropdown {
+    width: 100px;
+    display: inline-block;
+    .ui-selectmenu-button.ui-button {
+	    width: 100%;
+	    height: 60px;
+	    background: $white-color;
+	    padding: 20px 15px;
+        font-size: 14px
+	}
+}  

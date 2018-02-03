@@ -1,0 +1,22 @@
+/*main banner style
+=====================*/
+#main-banner{
+    min-height: 400px;
+	position: relative;
+	.owl-controls {
+	    text-align: center;
+	    padding: 15px 0;
+	    margin-bottom: -50px;
+	    .owl-dot {
+		    width: 15px;
+		    height: 15px;
+		    border: solid 2px $dots-blue-color;
+		    border-radius: 50%;
+		    display: inline-block;
+		    margin: 0 3px;
+		}
+		.owl-dot.active {
+	    	background: $dots-blue-color;
+		}
+	}
+}

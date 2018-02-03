@@ -1,0 +1,26 @@
+/*main-inner-section style
+=====================*/
+.inner-page-section{ 
+	background: $white-color;
+	box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	overflow: hidden;
+    padding: 15px 7px 10px 7px;
+    min-height: 960px;
+    .detail-text{
+		border-bottom: solid 1px $border-color;
+		padding: 15px 0;
+	}
+	.location{
+		padding: 15px 0;
+		p{
+			i{ color: $blue-color; margin-right: 8px;}
+			margin-bottom: 10px;
+		} 
+	}
+	h3{
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+}

@@ -1,0 +1,96 @@
+/*feature category style
+============================*/
+
+div#feature-category {
+    padding: 35px 0;
+    h2{
+    	font-size: 26px;
+    	text-align: center;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	    margin-bottom: 20px;
+	    @include bp-medium {
+			font-size: 22px;  
+		}
+		@include bp-small {
+			font-size: 18px;
+			margin-bottom: 10px;  
+		}
+    }
+    @include bp-small {
+		padding: 20px 0;  
+	}
+}
+
+.featured-carousel {
+	visibility: hidden;
+	padding-bottom: 35px;
+	border-bottom: solid 1px #e5e5e5;
+	margin-bottom: 30px;
+    position: relative;
+    @include mobile-small {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+	}
+	.details {
+    	position: relative;
+    	@include box-shadow(3px, 0, 5px, 0, rgba(0,0,0,0.1)); 
+		span.title {
+		    position: absolute;
+		    bottom: 0;
+		    font-size: 26px;
+		    text-transform: uppercase;
+		    color: #fff;
+		    padding: 15px;
+		    font-weight: bold;
+		}
+	}
+	.description {
+		padding: 15px 0 0 0;
+	}
+
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+	    margin-top: -50px;
+		>div {
+			display: inline-block;
+			color: transparent !important; 
+			background: url(../../img/featured-carousel-arows.png)no-repeat $white-color !important; 
+			width: 50px; 
+			height: 50px;
+			@include transition (all ease-in 0.3s); 
+			padding: 0;	
+			position: absolute;
+			border-radius: 50%;
+
+		}
+		.owl-prev {
+			background-position: 0px 0px !important; 
+			left: -70px;
+			@include bp-large {
+				left: -20px;
+			}
+		}
+		.owl-next {
+			background-position: right 0px !important;
+			right: -70px;
+			@include bp-large {
+				right: -20px; 
+			}
+		}
+		.owl-prev:hover {
+			background-position: -51px 0px !important;
+		}
+		.owl-next:hover {
+			background-position: -102px 0px !important;
+		}
+	}
+
+}
+
+.adv-banner{
+	cursor: pointer;
+}
+

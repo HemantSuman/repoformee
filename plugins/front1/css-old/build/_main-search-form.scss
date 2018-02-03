@@ -1,0 +1,313 @@
+/*main-search-form style
+=====================*/
+#main-search-form{
+	background: rgba(0,0,0,0.50);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+    z-index: 9;
+    padding: 18px 0;
+    @include bp-medium {
+		padding: 12px 0 10px 0;
+	}
+	@include mobile-medium {
+		top: 0;
+	}
+	.all-category-search>div{  
+		padding: 0;
+	}
+}
+
+.item-name{
+	display: block;
+	
+	.searchfield{
+		width: 100%;
+		background: $white-color;
+		height: 60px;
+		border: 0;
+		padding: 0 15px;
+		border-left: solid 1px #d6d6d6;
+		@include bp-medium {
+			height: 50px; 
+		}
+		@include bp-small {
+			height: 40px;
+			padding: 0 10px; 
+		}
+		@include mobile-medium{
+			margin-bottom: 2px;   
+		}
+	}
+	a.saved-search {
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+	    -moz-transform: translateY(-50%);
+	    right: 0;
+	    font-size: 14px;
+	    color: $green-color;
+        padding-left: 25px;
+        background: url(../../img/saved-search.png) no-repeat 10px center #fff;
+        padding: 5px 15px 5px 35px;
+        height: 100%;
+        line-height: 52px;
+        @include transition(all ease 0.5s);
+        &:hover{
+        	background-color: $input-bg;
+        }
+        @include bp-small {
+        	height: 38px;
+			line-height: 26px;
+        }
+	}
+}
+.location{
+	padding: 0 95px 0 0;
+	position: relative;
+	@include bp-medium {
+		padding: 0 75px 0 0;
+	}
+	@include bp-small {
+		padding: 0 55px 0 0;
+	}
+	@include mobile-medium {
+		padding: 0 0 0 0;
+	}
+	.locationfield{
+		width: 100%;
+		height: 60px;
+		border: 0;
+		padding: 0 15px 0 35px;
+		border-left: solid 1px #d6d6d6; 
+		background: url(../../img/locate-icon.png) no-repeat left 10px center $white-color; 
+		@include bp-medium {
+			height: 50px;
+			background-size: 10px;
+			padding: 0 15px 0 30px;
+		}
+		@include bp-small {
+			height: 40px;
+			padding: 0 10px 0 30px;
+			background-size: 10px; 
+		}
+		@include mobile-medium{
+			margin-bottom: 2px;   
+		}
+	}
+	.search-button{
+		width: 96px;
+		height: 60px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 0;
+		background: url(../../img/search-icon.png) no-repeat center $green-color;
+		@include transition (all ease 0.5s);
+		@include bp-medium {
+			width: 75px;
+			height: 50px; 
+			background-size: 24px;
+		}
+		@include bp-small {
+			width: 55px;
+			height: 40px; 
+			background-size: 18px;
+		}
+		@include mobile-medium{
+			position: static;
+			width: 100%;   
+		}
+	}
+	.search-button:hover{
+		background-color: $blue-color;
+	}
+}
+
+.km-dropdown {
+    width: 100%;
+    display: inline-block;
+    .ui-selectmenu-button.ui-button {
+	    width: 100%; 
+	    height: 60px;
+	    background: $white-color;
+	    padding: 20px 15px;
+        font-size: 14px;
+        @include bp-large {
+			padding: 20px 10px;
+		}
+        @include bp-medium {
+			height: 50px; 
+			padding: 16px 15px;
+		}
+		@include bp-small {
+			height: 40px; 
+			padding: 12px 10px;
+			font-size: inherit; 
+		}
+	}
+	@include mobile-medium{
+		margin-bottom: 2px;   
+	}
+}  
+
+/*===================================================
+		nth level custom selectbox by nipun
+====================================================*/
+.custom-selectbox{
+	overflow: hidden; 
+	display: block; 
+	background-color: $white-color;
+	@include mobile-medium{
+		margin-bottom: 2px;
+	} 
+	.selected{ 
+		height: 60px; 
+		line-height: 60px; 
+		background: url(../../img/select-arrow.png) no-repeat right 10px center $white-color; 
+		padding: 0 30px 0 15px; 
+		@include bp-medium {
+			height: 50px; 
+			line-height: 50px;  
+		}
+		@include bp-small {
+			height: 40px; 
+			line-height: 40px;  
+		}
+	}
+	img{
+		margin-right: 10px; 
+		width: 20px; 
+		vertical-align: middle;
+		@include bp-small {
+			margin-right: 6px; 
+			width: 14px; 
+		}
+	}  
+}
+
+ul.select-options {
+	padding: 0; 
+	margin: 0; 
+	margin: 0; 
+	display: none; 
+	width: 100%; 
+	background: $white-color; 
+	position: absolute; 
+	max-height: 500px; 
+	overflow: auto;
+	z-index: 8;	
+	li {
+		display: block; 
+		list-style: none; 
+		position: relative;
+		a{
+			display: block; 
+			border-bottom: solid 1px #f4f4f4; 
+			padding: 12px 15px; 
+			font-size: 14px;
+			@include bp-small {
+				padding: 8px 10px; 
+				font-size: 12px;	
+			}
+			&:hover{
+				background-color: #f4f4f4;
+			}
+		}
+		.dropdown-icon{
+			background: url(../../img/select-arrow.png) center no-repeat #fff; 
+			width: 40px; 
+			height: 43px; 
+			position: absolute; 
+			right: 0; 
+			z-index: 99999; 
+			top: 0; 
+			cursor: pointer;
+			@include bp-small {
+				height: 33px;
+				background-size: 8px;  
+			}
+		}
+		ul.dropdown{
+			padding-left: 15px; 
+			display: none;
+		}
+	}
+}
+
+
+/*autocomplete jQuery ui overwrite*/
+
+.ui-menu.ui-autocomplete{
+	li{ 
+		.ui-menu-item-wrapper{
+			padding: 10px 15px;
+			span.values{
+				color: $green-color;
+				display: inline-block;
+				padding-top: 5px;
+			}
+			&.ui-state-active{
+				background: $grey-color; 
+				span.values{
+					color: $white-color !important;
+				}
+			}
+		}
+	}
+}
+
+.dropdown-menu.saved-search-popup{
+		top: 100%;
+		width: 100%;
+		right: 0;
+		left: auto;
+		padding: 15px;
+		margin-top: -1px;
+		border-radius: 0;
+		max-height: 400px;
+		min-width: 300px;
+		overflow: auto;
+	    .radio, .input-field{
+	    	padding-top: 12px;
+	    	textarea{
+	    		font-size: 13px;
+	    		padding: 6px;
+	    		min-height: 80px;
+	    	}
+	    	.btn-green{
+	    		width: 100%;
+	    		background: $green-color;
+			    border: 0;
+			    color: $white-color;
+			    font-size: 15px;
+			    height: 40px;
+			    font-weight: 400;
+			    padding: 0;
+			    @inlcude transition(all ease 0.5s);	
+			    &:hover{
+			    	background: $blue-color;
+			    }
+		    }
+	    }
+	    h2{
+	    	font-size: 16px;
+	    	margin-bottom: 10px;
+	    	line-height: normal;
+	    }
+	    .avd-srch-sinup-btn{
+    		background: $green-color;
+		    border: 0;
+		    color: $white-color;
+		    font-size: 15px;
+		    height: 40px;
+		    font-weight: 400;
+		    padding: 0;
+		    @inlcude transition(all ease 0.5s);	
+		    &:hover{
+		    	background: $blue-color;
+		    }
+	    }
+
+	}

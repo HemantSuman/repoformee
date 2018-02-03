@@ -1,0 +1,398 @@
+/*main-inner-section style
+=====================*/
+#main-inner-section{
+	background: $categories-bg;
+	padding: 50px 0 50px 0;
+	@include bp-medium{
+		padding: 30px 0;
+	}
+	@include bp-small{
+		padding: 15px 0;
+	}
+	@include mobile-medium{
+		background: $white-color;
+		padding: 5px 0; 
+	}
+}
+ 
+.top-section{
+	display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    @include bp-small{
+		margin-bottom: 5px;	
+	}
+	.title{
+		@include mobile-small{
+			overflow: hidden;
+		}
+		h2{
+		    font-size: 26px;
+    		line-height: 30px;
+    		text-transform: capitalize;
+    		@include bp-medium{
+				font-size: 22px;
+			}
+			@include bp-small{
+				font-size: 18px;	
+			}
+		}
+	}
+	.filters{
+		float: right;
+		@include bp-small{
+			margin-top: -55px;	
+		    z-index: 9;
+    		position: relative;
+		}
+		@include mobile-medium{
+			margin-top: -50px;	
+		}
+		@include mobile-small{
+			margin-top: -43px;	
+		}
+		.view-type{
+			margin: 0 5px 0 0;
+			padding: 0;
+			display: inline-block;
+			float: left;
+			li{
+				list-style: none;
+				display: inline-block;
+				a{
+					float: left;
+				}
+				a img{
+					padding: 7px;
+					background: $grid-color;
+					display: inline-block;
+				}
+				&:hover a img{
+					background: $blue-color;
+				}
+				&.active a img{
+					background: $blue-color;
+				}
+			}
+		} 
+		.select-options{
+			select{
+				min-width: 130px;
+				font-size: 13px;
+    			display: inline-block;
+    			padding: 6px 10px;
+    			border: solid 1px $border-color;
+				@include appearance(none);
+				background: url(../../img/select-arrow.png) no-repeat right 10px center $input-bg;
+			}
+			@include mobile-small{
+				display: none;	
+			}
+		}
+	}
+}
+	
+div#result-view{ 
+	background: $white-color;
+	@include box-shadow(3px, 0, 5px, rgba(0,0,0,.1));
+    padding: 15px 7px 10px 7px;
+    min-height: 360px;
+    @include bp-medium{
+    	padding: 10px 7px;	
+    }
+    @include mobile-medium{
+    	padding: 5px 15px 15px;
+    	box-shadow: none;
+    	border-top: solid 1px $border-color;	 
+    }
+	div[class*="col-md"]{
+		padding: 0;
+	}
+	
+	.search-listing{
+		border: solid 1px $border-color;
+		>ul{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			>li{
+				list-style: none;
+				padding: 10px;
+				border-bottom: solid 1px $border-color; 
+				overflow: hidden;
+				background: $li-odd-bg;
+				@include transition (all ease 0.5s);
+				@include mobile-small{
+					padding: 6px; 
+				}
+				div[class*="col-"]{
+					padding: 0;  
+				}			
+				.description-sec{
+					.title{
+						font-size: 18px; 
+						font-weight: bold;
+					    margin-bottom: 8px;
+					    text-transform: capitalize;
+					    @include bp-medium{
+							font-size: 14px; 
+						}
+						@include mobile-small{
+							font-size: 13px;
+							margin-bottom: 4px;
+						}
+					}
+				}
+			}
+			>li:nth-child(even){
+				background: $li-even-bg;
+			}
+			>li:hover{
+				background: $li-hover !important;
+			}
+			.img-sec {
+				margin-right: 15px;
+				@include mobile-medium{
+			    	margin-right: 0;
+			    }
+			    img{
+			    	width: 100%;
+			    	height: 170px;
+			    }
+			}
+		}
+	}
+
+	.search-listing.grid-view {
+	    border: 0;
+	    >ul{
+	    	>li {
+			    width: 49%;
+			    float: left;
+			    margin-right: 1%;
+			    border: solid 1px #e9e9e9;
+			    margin-bottom: 10px;
+			    background: #f4f4f4;
+			    @include mobile-small{
+					padding: 5px;
+				}
+		    	&:nth-child(even){
+		    		margin-right: 0;
+		    		margin-left: 1%;
+		    	}
+		    	div[class*=col] {
+				    width: 100%;
+				    padding: 0;
+				    overflow: hidden;
+				}
+				.img-sec {
+					margin-right: 0;
+					img {
+				    	width: 100%;
+
+			    	}
+				}
+				.description-sec {
+					.title {
+					    margin: 10px 0 10px 0;
+					    @include mobile-small{
+							font-size: 13px;
+					    	margin: 5px 0 0 0;
+					    	padding: 0 1px;
+						}
+					}
+					p{
+						display: none; 
+					}
+					.head{
+						overflow: hidden;
+						border: 0;
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+					.price-tag{
+						@include mobile-medium{
+							position: static;
+							float: left;
+							margin-top: 10px;
+						}
+					}
+				}
+				.specification-table{
+					display: none;
+				}
+			}
+		}
+	}
+
+	/*car-listing updates
+	==========================================*/
+	.car-search-listing{
+		span.star-icon {
+		    margin-top: -30px;
+		    display: inline-block;
+		    /*margin-left: 5px;*/
+		    position: absolute;
+		    font-size: 16px;
+		    background: $white-color;
+		    color: $blue-color;
+		    border-radius: 50%;
+		    width: 25px;
+		    height: 25px;
+		    line-height: 25px;
+		    text-align: center;
+		    bottom: 10px;
+		    left: 10px;
+		    i{
+		    	line-height: 25px;
+		    }  
+		    &.active{
+		    	background: $blue-color;
+		    	color: $white-color;  
+		    }
+		}
+		>ul{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			>li{
+				list-style: none;
+				padding: 8px;
+				border: solid 1px $border-color;
+				overflow: hidden;
+				background: $white-color;
+				margin-bottom: 8px;
+				position: relative;   
+				.col-sm-4, .col-md-3{
+					padding: 0;
+				}
+				.col-sm-8, .col-md-9{
+					padding-right: 0;
+					padding-left: 15px;
+					@include mobile-medium{
+						padding-top: 0;
+						padding-left: 0;
+					}
+				}
+				.description-sec{
+					font-size: 14px;
+					@include bp-small{
+						font-size: 13px; 	
+					} 
+					.head{
+						padding-right: 120px;
+						padding-bottom: 10px;
+						position: relative;
+						border-bottom: solid 1px $border-color;
+						margin-bottom: 10px;
+						@include bp-medium{
+							padding-right: 50px;
+						}
+					}
+					.title{
+						font-size: 18px; 
+						font-weight: bold;
+					    margin-bottom: 8px;
+					    text-transform: capitalize;
+					    @include bp-medium{
+							font-size: 14px;
+						}
+						@include mobile-small{
+							font-size: 13px;
+							margin-bottom: 4px;
+						}
+					}
+					.locate{
+						font-size: 14px;
+						font-weight: 600;
+						@include bp-medium{
+							font-size: 12px;
+							font-weight: normal;   
+						}
+						i{
+							color: $blue-color;
+							margin-right: 5px;
+						}
+					}
+					span.price-tag{
+						float: right;
+						display: inline-block;
+						background: $blue-color;
+						color: $white-color;
+					    position: absolute;
+						right: 0;
+    					top: 7px;
+    					padding: 8px 15px;
+    					border-radius: 5px;
+					    @include bp-medium{
+							padding: 5px 10px;
+    						border-radius: 3px;
+						}
+
+					}
+					.specification-table{
+						margin-top: 10px;    
+						ul{
+							padding: 0;
+							margin: 0;
+							li{
+								padding: 5px;
+								list-style: none;
+								float: left;
+								width: 33%;
+								border: solid 1px $border-color;
+								line-height: 20px;
+								margin-top: -1px;
+								margin-left: -1px;
+								@include bp-medium{
+									width: 50%;	
+								}
+								img{
+									vertical-align: middle;
+									margin-right: 8px;
+									width: 16px;
+									height: 16px;
+								}
+							}
+						}
+					}
+				}
+				.img-sec{
+					img{
+						width: 100%;
+						height: 170px;
+					}
+				}
+			}  
+		}
+		
+	}
+}
+
+.pagination{
+	margin: 10px auto;
+	display: table;
+	border-radius: 0; 
+	li.active{
+		background: $blue-color;
+		color: $white-color;
+	}
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span{
+	border-radius: 0;
+}
+.pagination>li>a, .pagination>li>span{
+	color: $solid-color;
+	padding: 6px 8px;
+	margin-right: 3px;
+	@include mobile-small{
+		padding: 3px 4px;
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+/*main-inner-section style
+=====================*/
+#main-inner-section{
+	background: $categories-bg;
+	padding: 50px 0 50px 0;  
+}
+ 
+.top-section{
+	display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+	.title{
+		h2{
+		    font-size: 26px;
+    		line-height: 30px;
+		}
+	}
+	.filters{
+		float: right;
+		.view-type{
+			margin: 0 2px 0 0;
+			padding: 0;
+			display: inline-block;
+			float: left;
+			li{
+				list-style: none;
+				display: inline-block;
+				a img{
+					padding: 7px;
+					background: $grid-color;
+					display: inline-block;
+				}
+
+			}
+			li:hover a img{
+				background: $blue-color;
+			}
+			li.active a img{
+				background: $blue-color;
+			}
+		} 
+	}
+}
+	
+div#result-view{ 
+	background: $white-color;
+	box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: 3px 0 5px 0 rgba(0,0,0,.1);
+	overflow: hidden;
+    padding: 15px 7px 10px 7px;
+    min-height: 460px;
+	div[class*="col-md"]{
+		padding: 0;
+	}
+	
+	.search-listing{
+		border: solid 1px $border-color;
+		>ul{
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			>li{
+				list-style: none;
+				padding: 10px;
+				border-bottom: solid 1px $border-color; 
+				overflow: hidden;
+				background: $li-odd-bg;
+				transition: all ease 0.5s;
+				-webkit-transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s;
+				div[class="col-sm-4"]{
+					padding: 0;
+				}
+				.description-sec{
+					.title{
+						font-size: 18px; 
+						font-weight: bold;
+					    margin-bottom: 8px;
+					}
+				}
+			}
+			>li:nth-child(even){
+				background: $li-even-bg;
+			}
+			>li:hover{
+				background: $li-hover !important;
+			}
+		}
+		
+	}
+
+}
+
+.pagination{
+	margin: 10px auto;
+	display: table;
+	border-radius: 0; 
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span, .pagination>li:last-child>a, .pagination>li:last-child>span{
+	border-radius: 0;
+}
+.pagination>li>a, .pagination>li>span{
+	color: $solid-color;
+	padding: 6px 8px;
+	margin-right: 3px;	
+}

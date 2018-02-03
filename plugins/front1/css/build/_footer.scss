@@ -1,0 +1,255 @@
+/*footer style
+=====================*/
+footer{
+	background: $footer-bg;
+}
+div#footer-top{
+	background: $footer-top-bg;
+	padding: 7px 0 3px 0;
+}
+
+.social-media { 
+	margin-top: 0;
+	float: left;
+	@include mobile-small {
+		margin: 0 auto; 
+		float: none;
+		display: table;
+	}
+	ul { 
+		margin: 0; 
+		padding: 0; 
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0 4px 0 0;
+			padding: 0;
+			background: none;
+		    overflow: auto;
+			a { 
+				background: url(../../img/social-icons.png) no-repeat 0 0; 
+				font-size: 0; 
+				width: 38px; 
+				height: 46px; 
+				display: block;
+			    background-size: 168px;
+				@include transition (all ease 0.3s);				
+				@include bp-small {
+					width: 28px; 
+					height: 36px; 
+				    background-size: 128px;
+				}
+			}
+			&.facebook{ 
+				a { 
+					background-position:  0 0;
+					&:hover { 
+						background-position:  0 -46px;
+
+					}
+				}
+			}
+			&.googleplus{ 
+				a { 
+					background-position:  -43px 0;
+					@include bp-small {
+							background-position:  -33px 0;
+						} 
+					&:hover { 
+						background-position:  -43px -46px;
+						@include bp-small {
+							background-position:  -33px -36px;
+						}  
+					}
+				}
+			}
+			&.twitter{ 
+				a { 
+					background-position:  -86px 0;
+					@include bp-small {
+							background-position:  -66px 0;
+						} 
+					&:hover { 
+						background-position:  -86px -46px;
+						@include bp-small {
+							background-position:  -66px -36px;
+						}  
+					}
+				}
+			}
+			&.youTube{ 
+				a { 
+					background-position:  -130px 0;
+					@include bp-small {
+							background-position:  -100px 0;
+						}
+					&:hover { 
+						background-position:  -130px -46px;
+						@include bp-small {
+							background-position:  -100px -36px;
+						} 
+					}
+				}
+			}
+		}
+	}
+
+} 
+.app-store ul{
+    float: right;
+    margin: 5px 0 0 0;
+    padding: 0;
+	@include bp-small {
+		margin: 0 0 0 0;
+	}
+	@include mobile-small {
+		margin: 5px auto; 
+		float: none;
+		display: table;
+	}
+    li {
+    	display: inline;
+    	img{
+    		width: 130px;
+			@include bp-small {
+				width: 120px;
+			}
+    	}
+	}
+}
+
+div#footer-middle {
+    padding: 35px 0;
+	@include bp-small {
+		padding: 20px 0 0 0;
+	}
+	@include mobile-medium {
+		padding: 15px 0 0 0;
+	}
+	.mobile-toggle.active, .mobile-toggle .active{  
+		ul{
+			display: block;
+		}
+	}
+}
+.foo-inner-col{
+	color: #999;
+	overflow: hidden;
+	div[class*="col"]{
+		padding: 0;
+		@include bp-medium {
+			margin-bottom: 20px;
+		}
+	}
+	&.mobile-toggle{
+		h4{
+			@include mobile-medium {
+				
+			}
+		}
+		ul{
+			@include mobile-medium {
+				padding: 5px;
+				display: none; 
+				@include transition( all ease 20s);  
+			}
+		}
+		div[class*="col"]{
+			@include mobile-medium {
+				margin-bottom: 0;
+			}
+		}
+	}  
+	h4{
+		text-transform: uppercase;
+		color: $footer-text;
+		font-size: 16px;
+		margin-bottom: 15px;
+		clear: both;
+		@include bp-medium {
+			font-size: 14px;	
+		}
+		@include mobile-medium {
+			margin-bottom: 5px;
+			padding: 3px 10px;
+			background: $solid-color;
+			font-size: 12px;
+		}
+		i{
+			display: none;
+			@include mobile-medium {
+				float: right;
+				max-height: 15px;
+				display: inline-block;
+				margin-top: 6px;
+			}
+		}
+	}
+	ul{
+		margin: 0; 
+		padding: 0;	
+		li{
+			list-style: none;
+			margin-bottom: 10px;
+			a{
+				color: $footer-text-li;
+				padding-left: 20px;   
+			}
+		}
+		li.prayer-timing{background: url(../../img/f-li-icon-1.png) no-repeat 0 center;}
+		li.child-care{background: url(../../img/f-li-icon-2.png) no-repeat 0 center;}
+		li.education{background: url(../../img/f-li-icon-3.png) no-repeat 0 center;}
+		li.trades{background: url(../../img/f-li-icon-4.png) no-repeat 0 center;}
+		li.halal-products{background: url(../../img/f-li-icon-5.png) no-repeat 0 center;}
+		li.mosques{background: url(../../img/f-li-icon-6.png) no-repeat 0 center;}
+		li.restaurants{background: url(../../img/f-li-icon-7.png) no-repeat 0 center;}
+		li.hotels{background: url(../../img/f-li-icon-8.png) no-repeat 0 center;}
+		li.travel-agents{background: url(../../img/f-li-icon-9.png) no-repeat 0 center;}
+		li.shops{background: url(../../img/f-li-icon-10.png) no-repeat 0 center;}
+
+		li.about-us{background: url(../../img/f-li-icon-11.png) no-repeat 0 center;}
+		li.safety-tips{background: url(../../img/f-li-icon-12.png) no-repeat 0 center;}
+		li.contact-us{background: url(../../img/f-li-icon-13.png) no-repeat 0 center;}
+		li.faq{background: url(../../img/f-li-icon-14.png) no-repeat 0 center;}
+		li.terms-of-use{background: url(../../img/f-li-icon-15.png) no-repeat 0 center;}
+		li.privacy-policy{background: url(../../img/f-li-icon-16.png) no-repeat 0 center;}
+		li.legal-notice{background: url(../../img/f-li-icon-17.png) no-repeat 0 center;}
+		
+	}
+}
+.newsletter{ 
+	font-size: 13px;
+	input[type="email"]{
+		width: 100%;
+		max-width: 300px;
+		border: 0;
+		background: url(../../img/message-icon.png)no-repeat right 10px center $white-color;
+		border-radius: 3px;
+		height: 36px;
+		margin: 20px 0;
+		padding: 0 40px 0 10px;
+		@include bp-small {
+			margin: 10px 0;
+			height: 30px;
+		}
+	}
+}
+
+input[type="email"]:placeholder{
+
+}
+
+div#footer-bottom{
+	background: $black-color;
+	padding: 18px 0;
+    color: $white-color;
+    text-align: center;
+    @include mobile-small { 
+		padding: 10px 0; 
+	    font-size: 10px; 	
+	}  
+    a{
+    	color: $green-color;	
+    }
+}
+

@@ -1,0 +1,268 @@
+/*common popup style
+=====================*/
+.modal{
+	z-index: 99999;
+	.modal-dialog{
+		margin-top: 80px;
+		width: 504px;
+		@include mobile-medium{
+			max-width: 90%;
+			margin: 30px auto 0;
+			box-sizing: border-box;
+		}
+		.modal-content{
+			border-radius: 0;
+			.modal-body{
+				padding: 30px;
+				@include mobile-medium{
+					padding: 15px;
+				}
+			}
+		}
+		&.large-width{
+			width: 700px;
+		}
+	}
+	.modal-content{
+		>button.close {
+	    margin-top: -18px;
+	    margin-right: -18px;
+	    background: $light-blue-color;
+	    opacity: 1;
+	    color: $white-color;
+	    border-radius: 50%;
+	    font-size: 36px;
+	    box-shadow: 3px 0 5px 0 rgba(0,0,0,.8);
+	    -webkit-box-shadow: 3px 0 5px 0 rgba(0,0,0,.8);
+	    -moz-box-shadow: 3px 0 5px 0 rgba(0,0,0,.8);
+	    transition: all ease 0.5s;
+		-webkit-transition: all ease 0.5s;
+		-moz-transition: all ease 0.5s;
+		position: relative;
+	    z-index: 9;
+	    @include mobile-medium{
+			margin-top: -13px;
+	    	margin-right: -10px;
+	    	width: 26px;
+	    	height: 26px;
+		}
+		}
+		>button.close:hover {
+			background: $black-color;
+		}
+	}
+	.sign-in-sec{
+		a{
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			text-align: center;
+			color: $white-color;
+			background: $blue-color;
+			padding: 7px;
+			margin-bottom: 15px;
+			line-height: 26px;
+			@include transition(all ease 0.5s );
+			@include mobile-medium{
+				padding: 4px;
+				margin-bottom: 5px;
+				font-size: 12px;
+			}
+			i{
+				width: 26px;
+				height: 26px;
+				border-radius: 5px;
+				float: left;
+				line-height: 26px;
+				background: $white-color;
+				transition: all ease 0.5s;
+				-webkit-transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s;
+			}
+		}
+		a.facebook{
+			background: $facebook-color ;
+			i{
+				color: $facebook-color ;	
+			}
+		}
+		a.google{
+			background: $google-color ;
+			i{
+				color: $google-color ;	
+			}
+		}
+		a:hover{
+			background: $blue-color !important ;
+			i{
+				color: $blue-color !important ;
+			}
+		}
+	}
+	.or {
+    	text-align: center;
+	    height: 26px;
+	    margin-bottom: 15px;
+	    @include mobile-medium{
+	    	margin-bottom: 5px;
+		}
+    	span {
+		    width: 40px;
+		    line-height: 26px;
+		    display: inline-block;
+		    background: $white-color;
+		    font-size: 18px;
+		    color: $black-color;
+		    text-transform: uppercase;
+		    @include mobile-medium{
+		    	font-size: 13px;
+			}
+		}
+	}
+	.or:after{
+		content: '';
+		width: 100%;
+		height: 1px;
+		background: $p-border-color;
+		display: block;
+		margin-top: -13px;
+	}
+	.signin-form{
+		input[type="text"], input[type="email"], input[type="password"]{
+			width: 100%;
+			border: solid 1px $p-border-color;
+			line-height: 34px;
+			height: 34px;
+			text-align: center;
+			@include mobile-medium{
+		    	line-height: 30px;
+		    	height: 30px;
+		    	font-size: 13px;
+			}
+		}
+		input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+			outline: 0;
+			border: solid 1px $black-color;
+		}
+		.form-group{
+		    overflow: hidden;
+		    @include mobile-medium{
+		    	margin-bottom: 7px;
+			}
+			div[class*="col-"]{
+				padding: 0;
+				label{
+					font-weight: normal;
+				}
+			}
+		}
+		input.m-checkbox {
+		    position: relative;
+		    z-index: 1;
+		    appearance:none;
+		    -webkit-appearance: none;
+		   -moz-appearance:none;
+		   opacity: 0;
+		   width: 18px;
+		   height: 16px;
+		   display: inline-block;
+		   margin: 0;
+		}
+		input.m-checkbox+label {
+		    margin-left: -20px;
+		    padding-left: 20px;
+		    position: relative;
+		    z-index: 0;
+		    background: url(../../img/checkbox-icon.png) no-repeat 0 2px;
+		}
+		input.m-checkbox:checked+label {
+			background: url(../../img/checkbox-icon-checked.png) no-repeat 0 2px;
+		}
+		input.m-checkbox:focus {
+			outline: 0;
+		}
+		input[type="submit"]{
+			width: 100%;
+			border: 0;
+			line-height: 40px;
+			text-align: center;
+			background: $blue-color;
+			color: $white-color;
+			text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    		text-transform: uppercase;
+    		font-size: 16px;
+    		@include transition( all ease 0.5s);
+			@include mobile-medium{
+		    	line-height: 34px;
+		    	font-size: 13px;
+			}
+		}
+		input[type="submit"]:hover{
+			background-color: $dark-green-color;
+		}
+		em.terms-condition {
+		    text-align: center;
+		    display: block;
+		    font-size: 13px;
+		    @include mobile-medium{
+		    	font-size: 11px;
+			}
+		}
+
+	}
+	.not-a-member {
+	    text-align: center;
+	    padding: 15px 0;
+	    border-top: 1px solid $p-border-color;
+	    margin-top: -15px;
+	    @include mobile-medium{
+			padding: 8px 0;
+		}
+	    a{
+	    	@include transition(all ease 0.5s);
+	    }
+	    a:hover{
+	    	color: $blue-color;
+	    }
+	}
+	.form-group{
+		position: relative;
+		input:not([type=checkbox])+label.error{
+			font-size: 14px;
+    		color: red;
+    		font-weight: normal;
+    		display: inherit;
+    		@include mobile-medium{
+		    	font-size: 11px;
+			}
+		}
+	}
+}
+
+.modal-backdrop.in{
+	opacity: 0.7;
+	z-index: 9999;
+}
+
+#query-modal{
+	.btn.btn-green{
+		background: $green-color;
+		width: 100%;
+		border: 0;
+	    color: $white-color;
+	    font-size: 16px;
+	    height: 50px;
+	    font-weight: 400;
+	    text-align: center;
+	    @include transition(all ease 0.5s);
+	    &:hover{
+	    	background: $blue-color;
+	    }
+	}
+}
+
+/*.modal-open{
+	padding-right: 0 !important;
+	overflow-y: scroll;
+}*/
+
